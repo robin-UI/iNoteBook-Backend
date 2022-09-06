@@ -1,11 +1,14 @@
 const connectedToMongo = require('./db')
 const express = require('express');
-// const { json } = require('express');
 
+//Connecting to the mongodb server using mongooes
 connectedToMongo();
-const app = express()
-const port = 3000
 
+//Express connection
+const app = express()
+const port = 5000
+
+//Middlewere to resive json request
 app.use(express.json())
 
 app.get('/', (req, res) => {
